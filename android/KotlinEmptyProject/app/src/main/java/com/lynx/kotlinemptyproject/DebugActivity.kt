@@ -20,6 +20,7 @@ class DebugActivity : Activity() {
     private fun buildLynxView(): LynxView {
         val viewBuilder = LynxViewBuilder()
         viewBuilder.setTemplateProvider(DemoTemplateProvider(this))
+        viewBuilder.setMediaResourceFetcher(DemoLynxMediaResourceFetcher(this))
         return viewBuilder.build(this)
     }
 }
