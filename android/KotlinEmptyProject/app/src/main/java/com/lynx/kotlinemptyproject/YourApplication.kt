@@ -34,7 +34,7 @@ class YourApplication : Application() {
         LynxServiceCenter.inst().registerService(LynxLogService)
 
         // register devtool service
-        LynxServiceCenter.inst().registerService(LynxDevToolService)
+//        LynxServiceCenter.inst().registerService(LynxDevToolService)
         LynxServiceCenter.inst().registerService(LynxHttpService)
     }
 
@@ -46,11 +46,11 @@ class YourApplication : Application() {
             null
         )
         // Turn on Lynx Debug
-        LynxEnv.inst().enableLynxDebug(true)
+//        LynxEnv.inst().enableLynxDebug(true)
         // Turn on Lynx DevTool
-        LynxEnv.inst().enableDevtool(true)
+//        LynxEnv.inst().enableDevtool(true)
         // Turn on Lynx LogBox
-        LynxEnv.inst().enableLogBox(true)
+//        LynxEnv.inst().enableLogBox(true)
         // Create a Handler associated with the main thread's Looper
         val mainHandler = Handler(Looper.getMainLooper())
         // Register OpenCard for Lynx DevTool
