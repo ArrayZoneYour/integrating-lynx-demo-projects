@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,10 @@
 		2B94A3D52D6613740060892C /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 2B94A3D42D6613740060892C /* Base */; };
 		2B94A3DD2D6614980060892C /* DemoLynxProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B94A3DC2D6614980060892C /* DemoLynxProvider.swift */; };
 		2BE49E032D7720F0000D068C /* main.lynx.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2BE49E022D7720F0000D068C /* main.lynx.bundle */; };
+		4CB83C5A2D7EEE6A00AD3A57 /* LocalMediaFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB83C592D7EEE6600AD3A57 /* LocalMediaFetcher.swift */; };
+		4CB83C782D7F23A000AD3A57 /* images.lynx.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4CB83C772D7F23A000AD3A57 /* images.lynx.bundle */; };
+		4CB83C7A2D7F25B100AD3A57 /* 0.lynx.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4CB83C792D7F25B100AD3A57 /* 0.lynx.bundle */; };
+		4CB83D212D7F38C600AD3A57 /* 204to1000.lynx.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4CB83D202D7F38C600AD3A57 /* 204to1000.lynx.bundle */; };
 		63972E0D34F86B0706325BCE /* libPods-Hello-Lynx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4B67B2104D0445A811952B8 /* libPods-Hello-Lynx.a */; };
 /* End PBXBuildFile section */
 
@@ -30,10 +34,18 @@
 		2B94A3DC2D6614980060892C /* DemoLynxProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoLynxProvider.swift; sourceTree = "<group>"; };
 		2B94A3DE2D6614DC0060892C /* Hello-Lynx-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hello-Lynx-Bridging-Header.h"; sourceTree = "<group>"; };
 		2BE49E022D7720F0000D068C /* main.lynx.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = main.lynx.bundle; sourceTree = "<group>"; };
+		4CB83C592D7EEE6600AD3A57 /* LocalMediaFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalMediaFetcher.swift; sourceTree = "<group>"; };
+		4CB83C772D7F23A000AD3A57 /* images.lynx.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = images.lynx.bundle; sourceTree = "<group>"; };
+		4CB83C792D7F25B100AD3A57 /* 0.lynx.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = 0.lynx.bundle; sourceTree = "<group>"; };
+		4CB83D202D7F38C600AD3A57 /* 204to1000.lynx.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = 204to1000.lynx.bundle; sourceTree = "<group>"; };
 		61CE2062BA0F77A3DF32F268 /* Pods-Hello-Lynx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hello-Lynx.release.xcconfig"; path = "Target Support Files/Pods-Hello-Lynx/Pods-Hello-Lynx.release.xcconfig"; sourceTree = "<group>"; };
 		72043EE1F9E3529358168057 /* Pods-Hello-Lynx.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hello-Lynx.debug.xcconfig"; path = "Target Support Files/Pods-Hello-Lynx/Pods-Hello-Lynx.debug.xcconfig"; sourceTree = "<group>"; };
 		C4B67B2104D0445A811952B8 /* libPods-Hello-Lynx.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Hello-Lynx.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		4CB83D132D7F371700AD3A57 /* static */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = static; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		2B94A3C22D6613730060892C /* Frameworks */ = {
@@ -50,6 +62,10 @@
 		2B94A3BC2D6613730060892C = {
 			isa = PBXGroup;
 			children = (
+				4CB83D202D7F38C600AD3A57 /* 204to1000.lynx.bundle */,
+				4CB83D132D7F371700AD3A57 /* static */,
+				4CB83C792D7F25B100AD3A57 /* 0.lynx.bundle */,
+				4CB83C772D7F23A000AD3A57 /* images.lynx.bundle */,
 				2BE49E022D7720F0000D068C /* main.lynx.bundle */,
 				2B94A3C72D6613730060892C /* Hello-Lynx */,
 				2B94A3C62D6613730060892C /* Products */,
@@ -69,6 +85,7 @@
 		2B94A3C72D6613730060892C /* Hello-Lynx */ = {
 			isa = PBXGroup;
 			children = (
+				4CB83C592D7EEE6600AD3A57 /* LocalMediaFetcher.swift */,
 				2B94A3C82D6613730060892C /* AppDelegate.swift */,
 				2B94A3CA2D6613730060892C /* SceneDelegate.swift */,
 				2B94A3CC2D6613730060892C /* ViewController.swift */,
@@ -116,6 +133,9 @@
 			);
 			dependencies = (
 			);
+			fileSystemSynchronizedGroups = (
+				4CB83D132D7F371700AD3A57 /* static */,
+			);
 			name = "Hello-Lynx";
 			productName = "Hello-Lynx";
 			productReference = 2B94A3C52D6613730060892C /* Hello-Lynx.app */;
@@ -159,6 +179,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CB83C7A2D7F25B100AD3A57 /* 0.lynx.bundle in Resources */,
+				4CB83D212D7F38C600AD3A57 /* 204to1000.lynx.bundle in Resources */,
+				4CB83C782D7F23A000AD3A57 /* images.lynx.bundle in Resources */,
 				2BE49E032D7720F0000D068C /* main.lynx.bundle in Resources */,
 				2B94A3D22D6613740060892C /* Assets.xcassets in Resources */,
 				2B94A3D52D6613740060892C /* Base in Resources */,
@@ -219,6 +242,7 @@
 				2B94A3CD2D6613730060892C /* ViewController.swift in Sources */,
 				2B94A3C92D6613730060892C /* AppDelegate.swift in Sources */,
 				2B94A3CB2D6613730060892C /* SceneDelegate.swift in Sources */,
+				4CB83C5A2D7EEE6A00AD3A57 /* LocalMediaFetcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

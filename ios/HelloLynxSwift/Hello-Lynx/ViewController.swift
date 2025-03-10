@@ -7,6 +7,8 @@ class ViewController: UIViewController {
 
     let lynxView = LynxView { builder in
       builder.config = LynxConfig(provider: DemoLynxProvider())
+      builder.mediaResourceFetcher = LocalMediaFetcher()
+      builder.enableGenericResourceFetcher = LynxBooleanOption.true
       builder.screenSize = self.view.frame.size
       builder.fontScale = 1.0
     }
