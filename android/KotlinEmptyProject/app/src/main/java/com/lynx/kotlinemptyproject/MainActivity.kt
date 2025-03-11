@@ -2,6 +2,7 @@ package com.lynx.kotlinemptyproject
 
 import android.app.Activity
 import android.os.Bundle
+import android.os.Handler
 import android.util.Log
 import com.lynx.tasm.LynxBooleanOption
 import com.lynx.tasm.LynxLoadMeta
@@ -20,11 +21,11 @@ class MainActivity : Activity() {
         lynxView.updateGlobalProps(TemplateData.fromMap(mapOf("platform" to "android")))
         setContentView(lynxView)
 
-        val path = intent.getStringExtra("path")
+        val path = intent.getStringExtra("path") ?: ""
 
         val uri = "${path}/main.lynx.bundle"
 
-        if (path.equals("cssBtsInitData")) {
+        if (path.startsWith("cssBtsInitData")) {
 
             val builder = LynxLoadMeta.Builder()
 
@@ -38,20 +39,13 @@ class MainActivity : Activity() {
             val meta = builder.build()
             lynxView.loadTemplate(meta)
 
-            Thread {
-                Thread.sleep(3000)
-
-                Log.d("aaa", "3s 后执行")
-
-                lynxView.post {
-                    val builderUpdate = LynxUpdateMeta.Builder()
-                    builderUpdate.setUpdatedData(TemplateData.fromMap(mapOf("title" to "ABCDEFGHIJKLMNOPQRSTUVWXYZ")))
-                    val metaUpdate = builderUpdate.build()
-                    lynxView.updateData(metaUpdate.updatedData)
-                    Log.d("aaa", "updateData in ${Thread.currentThread().name}")
-                }
-            }.start()
-
+            Handler().postDelayed({
+                val builderUpdate = LynxUpdateMeta.Builder()
+                builderUpdate.setUpdatedData(TemplateData.fromMap(mapOf("title" to "ABCDEFGHIJKLMNOPQRSTUVWXYZ")))
+                val metaUpdate = builderUpdate.build()
+                lynxView.updateData(metaUpdate.updatedData)
+                Log.d("aaa", "updateData in ${Thread.currentThread().name}")
+            }, 2000)
 
         } else {
 

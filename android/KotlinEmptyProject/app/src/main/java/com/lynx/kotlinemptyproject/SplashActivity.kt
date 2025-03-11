@@ -30,6 +30,7 @@ class SplashActivity: Activity() {
         linearLayout.addView(buildBtn("css"))
         linearLayout.addView(buildBtn("cssBst"))
         linearLayout.addView(buildBtn("cssBtsInitData"))
+        linearLayout.addView(buildBtn("cssBtsInitDataNoCrash"))
 
         setContentView(linearLayout, layoutParams)
     }
