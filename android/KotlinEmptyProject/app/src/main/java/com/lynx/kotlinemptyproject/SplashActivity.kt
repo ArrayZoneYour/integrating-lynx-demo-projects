@@ -4,10 +4,10 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.Gravity
-import android.view.ViewGroup
 import android.widget.Button
 import android.widget.LinearLayout
-import androidx.compose.foundation.gestures.Orientation
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.toArgb
 
 class SplashActivity: Activity() {
 
@@ -23,21 +23,24 @@ class SplashActivity: Activity() {
         )
         layoutParams.gravity = Gravity.CENTER
 
-        linearLayout.addView(buildBtn("204"))
-        linearLayout.addView(buildBtn("204to1000"))
-        linearLayout.addView(buildBtn("images"))
+        linearLayout.addView(buildBtn("204(测试 - 长列表静置)"))
+        linearLayout.addView(buildBtn("204to1000(测试 - 长列表滚动)"))
+        linearLayout.addView(buildBtn("images(测试 - 多图渲染场景)"))
         linearLayout.addView(buildBtn("cssInJs"))
         linearLayout.addView(buildBtn("css"))
         linearLayout.addView(buildBtn("cssBst"))
         linearLayout.addView(buildBtn("cssBtsInitData"))
-        linearLayout.addView(buildBtn("cssBtsInitDataNoCrash"))
+        linearLayout.addView(buildBtn("cssBtsInitDataNoCrash(测试 - 卡片场景)"))
 
         setContentView(linearLayout, layoutParams)
     }
 
      fun buildBtn(text: String) :Button{
          val button = Button(this)
-         button.text = "点击打开一个Lynx测试页面 - 用例：${text}"
+         button.text = "LynxDemo - 用例：${text}"
+         if (!text.contains("测试 - ")) {
+             button.setTextColor(Color.LightGray.toArgb())
+         }
          button.setOnClickListener {
              val intent = Intent(this, MainActivity::class.java)
              intent.putExtra("path", text)
