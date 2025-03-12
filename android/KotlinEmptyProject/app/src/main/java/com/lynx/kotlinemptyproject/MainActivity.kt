@@ -23,7 +23,7 @@ class MainActivity : Activity() {
 
         val path = intent.getStringExtra("path") ?: ""
 
-        val uri = "${path}/main.lynx.bundle"
+        val uri = "${path.split("(")[0]}/main.lynx.bundle"
 
         if (path.startsWith("cssBtsInitData")) {
 
